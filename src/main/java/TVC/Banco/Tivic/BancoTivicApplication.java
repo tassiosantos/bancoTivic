@@ -1,19 +1,19 @@
-package BCTVC.Banco.Tivic;
+package TVC.Banco.Tivic;
+
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
-@RestController
+@ComponentScan
+@CrossOrigin
 public class BancoTivicApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BancoTivicApplication.class, args);
 	}
-	@GetMapping
-	public String Hello(){
-		return "Hello banco tivic";
-	}
+
+	
 }	

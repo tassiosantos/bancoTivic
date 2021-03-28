@@ -1,10 +1,10 @@
-package com.example.demo;
+package TVC.Banco.Tivic;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DemoApplicationTests {
+class BancoTivicApplicationTests {
 
 	@Test
 	void contextLoads() {

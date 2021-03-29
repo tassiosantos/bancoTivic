@@ -45,7 +45,10 @@ Observações:
 
 
 
+O Back-End funcionou como esperado, com o CRUD funcional. O framework Spring-Boot ajuda muito por ser intuitivo e prático.
+O Front-End teve problemas com algumas limitações. O framework Angular tem muitas versões e uma sintax que muda muito de algumas versões mais antigas para as atuais. A montagem foi feita parcial, mas a comunicação com o DB foi feita de forma satisfatória, se conseguindo recuperar qualquer dado do banco de dados.
+As regras de negócios das funções requisitadas não puderam ser concluídas por conta da dificuldade com a sintaxe do framework e problemas com importações e utilização de elementos importados. 
 
 
 
-Por ser uma questão de prática comum, o código foi escrito em inglês.
+Por ser uma questão de prática comum, o código foi escrito majoritariamente em inglês.

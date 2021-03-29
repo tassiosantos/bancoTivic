@@ -15,8 +15,14 @@ export class ApiService {
       return this.httpClient.get(this.API_URL);
       }
 
-      public getClient(){
-        return this.httpClient.get(`${this.API_URL}/client/account`) ;
+      public getClients(){
+        return this.httpClient.get(`${this.API_URL}/client/all`) ;
       }
+
+      public getByCpf(cpf: string){
+        return this.httpClient.get(`${this.API_URL}/client/getbycpf/` + cpf);
+      }
+
   
 }
+ 

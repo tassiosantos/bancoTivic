@@ -11,10 +11,10 @@ export class AppComponent {
   teste = "";
   constructor(private apiService: ApiService){}
   ngOnInit() {
-    this.apiService.getClient().subscribe((data: any)=>
+    this.apiService.getClients().subscribe((data: any)=>
        {
-        console.log(data);
-        this.teste = data[0].account + ' back + front';
+        
+        
       })
   }
   

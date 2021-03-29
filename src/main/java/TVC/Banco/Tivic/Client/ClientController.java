@@ -32,9 +32,9 @@ public class ClientController {
         
     }
 
-    @GetMapping(path = "/getbyname/{name}")
-    public List<Client> getClientByName(@PathVariable("name") String name){
-        return this.clientService.getClientByName(name);
+    @GetMapping(path = "/getbycpf/{cpf}")
+    public List<Client> getClientByCpf(@PathVariable("cpf") String cpf){
+        return this.clientService.getClientByCpf(cpf);
         
 
     }

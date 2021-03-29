@@ -1,1 +1,28 @@
-<button mat-raised-button color="accent" (click)='home()'>Home</button>
+ <div> <p ng-bind = "account" > Conta n: {{ account.number }} </p> </div>
+ <div> <p ng-bind = "client" > Cliente: {{ client.name }} </p> </div>
+ <div> <p ng-bind = "account" > Saldo: {{ account.balance }} </p> </div>
+  
+
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Valor do saque</mat-label>
+    <input matInput placeholder="valor do saque" value="1">
+  </mat-form-field>
+    <button mat-button type="sacar()"> Realizar Saque </button>
+</div>
+
+<div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Valor do depósito</mat-label>
+    <input matInput placeholder="valor do deposito" value = "2" >
+  </mat-form-field>
+      <button mat-button (click)="depositar()"> Realizar Deposito </button>
+</div>
+
+
+
+
+
+      
+    
+      <button mat-button (click)="home()"> Sair </button>

@@ -5,7 +5,7 @@ import { HomeComponent } from './banco/home/home.component';
 import { NewclientComponent } from './banco/newclient/newclient.component';
 
 const routes: Routes = [
-  // {path: '', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'client/account/:accountnumber', component: AccountComponent},
   {path: 'client/all', component: HomeComponent},
   {path: 'client/addclient', component: NewclientComponent},

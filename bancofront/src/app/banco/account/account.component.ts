@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AccountService } from './account.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import {Router} from '@angular/router';
+import { FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-account',
@@ -9,9 +11,17 @@ import {Router} from '@angular/router';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
+
   
   accountnumber = "";
-  account = [];
+  nome = "";
+  saldo = 0;
+  cpf = "";
+  account: any;
+  client: any;
+  deposito = 0;
+  saque = new FormControl(0);
+
 
   constructor(private accountService: AccountService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
@@ -21,18 +31,41 @@ export class AccountComponent implements OnInit {
       this.accountnumber = param['accountnumber']
       
     );
-    console.log(this.accountnumber);
+    
 
     this.accountService.getAccountByNumber(this.accountnumber).subscribe((data: any)=> {
-      this.account = data;
+      this.account = data[0];
       console.log(this.account);
+      this.saldo = this.account.balance;
+      
     });
 
+    this.accountService.getByAccount(this.accountnumber).subscribe((data: any)=> {
+      this.client = data[0];
+      
+    });
+
+
+        
    }
 
    home() {
      this.router.navigate(['/client/all'])
    }
+
+   depositar(){
+      
+   }
+
+   sacar(){
+
+   }
+
+
+
+
+
+
   }
 
 

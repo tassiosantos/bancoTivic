@@ -2,18 +2,12 @@
 <div class="mat-elevation-z8">
 <table mat-table [dataSource]="dataSource">
 
-
-  <!--- Note that these columns can be defined in any order.
-        The actual rendered columns are set as a property on the row definition" -->
-
-  <!-- Position Column -->
   <ng-container matColumnDef="Name">
     <th mat-header-cell *matHeaderCellDef> NOME </th>
     <td mat-cell *matCellDef="let element"> {{element.name}} </td>
 
   </ng-container>
 
-  <!-- Name Column -->
   <ng-container matColumnDef="Cpf">
     <th mat-header-cell *matHeaderCellDef> CPF </th>
     <td mat-cell *matCellDef="let element"> {{element.cpf}}
@@ -21,7 +15,6 @@
      </td>
   </ng-container>
 
-  <!-- Weight Column -->
   <ng-container matColumnDef="Conta">
     <th mat-header-cell *matHeaderCellDef> CONTA  </th>
     <td mat-cell *matCellDef="let element"> {{element.account}} </td>

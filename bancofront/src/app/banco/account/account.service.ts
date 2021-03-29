@@ -24,6 +24,10 @@ export class AccountService {
         return this.httpClient.get(`${this.API_URL}/client/getbycpf/` + cpf);
       }
 
+      public getByAccount(account: string){
+        return this.httpClient.get(`${this.API_URL}/client/getbyaccount/` + account);
+      }
+
 
       public getAccountByNumber(number: string){
         return this.httpClient.get(`${this.API_URL}/account/getbynumber/` + number);

@@ -1,28 +1,34 @@
-<form class="newclient-form">
 
-<mat-form-field appearance="fill" class="newclient-full-width">
-  <mat-label>Nome</mat-label>
-  <input matInput>
-</mat-form-field>
+<form formGroup ="form" (ngSubmit)="onSubmit()" class="newclient-form">
 
-<mat-form-field appearance="fill" class="newclient-full-width">
-  <mat-label>Cpf</mat-label>
-  <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="fill" class="newclient-full-width">
+      <mat-label>Nome</mat-label>
+      <input matInput (ngModel)="clientName" required>
+      <mat-error *ngIf="">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
 
-<mat-form-field appearance="fill" class="newclient-full-width">
-  <mat-label>Numero da Conta</mat-label>
-  <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="fill" class="newclient-full-width">
+      <mat-label>Cpf</mat-label>
+      <input matInput (ngModel)="clientCpf" required>
+      <mat-error *ngIf="">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
 
-<mat-form-field appearance="fill" class="newclient-full-width">
-  <mat-label>Deposito Inicial</mat-label>
-  <input matInput>
-</mat-form-field>
+    <mat-form-field appearance="fill" class="newclient-full-width">
+      <mat-label>Numero da Conta</mat-label>
+      <input matInput (ngModel)="clientAccount" required>
+      <mat-error *ngIf="">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="newclient-full-width">
+      <mat-label>Deposito Inicial</mat-label>
+      <input matInput (ngModel)="clientBalance" required>
+      <mat-error *ngIf="">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+
+
+      <button mat-button type="submit"> Adicionar Cliente </button>
+      <button mat-button (click)="home()"> Cancelar </button>
+
 
 </form>
 
-<div>
-  <button mat-button (click)="addClient()"> Adicionar Cliente </button>
-  
-</div>

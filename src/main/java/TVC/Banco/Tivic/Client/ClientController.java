@@ -39,6 +39,14 @@ public class ClientController {
 
     }
 
+
+    @GetMapping(path = "/getbyaccount/{account}")
+    public List<Client> getClientByAccount(@PathVariable("account") String account){
+        return this.clientService.getClientByAccount(account);
+        
+
+    }
+
     @PostMapping(path = "/addclient")
     public void addClient(@RequestBody Client newClient) {
         this.clientService.addClient(newClient);

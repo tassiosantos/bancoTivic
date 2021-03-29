@@ -27,8 +27,6 @@ export class HomeComponent implements OnInit {
       this.homeService.getClients().subscribe((data: any)=>
       {          
           this.clients = data;
-          console.log(typeof(this.clients));
-          console.log(this.clients);
           this.dataSource = new MatTableDataSource(this.clients);    
           this.dataSource.paginator = this.paginator;    
         })
